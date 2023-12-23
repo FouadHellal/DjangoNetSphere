@@ -1,71 +1,27 @@
-## DjangoNetSphere
-#Django - Web - Network Automation
+# DjangoNetSphere
 
-DjangoNetSphere
-Overview
+## Overview
+
 DjangoNetSphere is a sophisticated smart home automation system that leverages the power of Django, a robust web framework, to seamlessly integrate network automation. This project includes a feature-rich temperature dashboard that monitors real-time environmental conditions and triggers network commands based on temperature thresholds.
 
-Features
-Temperature Dashboard: View real-time temperature, humidity, and pressure data through a user-friendly web interface.
+## Features
 
-Network Integration: Dynamically trigger network commands using Telnet based on temperature conditions.
+- **Temperature Dashboard:** View real-time temperature, humidity, and pressure data through a user-friendly web interface.
 
-Getting Started
-Prerequisites
-Python (3.6 or higher)
-Django
-Telnetlib3
-Installation
-Clone the repository:
+- **Network Integration:** Dynamically trigger network commands using Telnet based on temperature conditions.
 
-bash
-Copy code
-git clone https://github.com/yourusername/DjangoNetSphere.git
-cd DjangoNetSphere
-Create a virtual environment (optional but recommended):
+## Getting Started
 
-bash
-Copy code
-python -m venv venv
-source venv/bin/activate  # On Windows: .\venv\Scripts\activate
-Install dependencies:
+### Prerequisites
 
-bash
-Copy code
-pip install -r requirements.txt
-Set up Django database:
+- Python (3.6 or higher)
+- Django
+- Telnetlib3
 
-bash
-Copy code
-python manage.py migrate
-Run the Django development server:
+### Installation
 
-bash
-Copy code
-python manage.py runserver
-Access the web interface at http://localhost:8000.
+1. Clone the repository:
 
-Configuration
-Configure Django settings in settings.py, including database settings.
-Adjust Telnet configurations in views.py and update the execute_telnet_commands function with your specific commands and network details.
-Files and Directories
-data.json: Stores real-time environmental data.
-events/views.py: Contains view functions, including Telnet commands and data retrieval logic.
-events/urls.py: Defines URL patterns for the application.
-events/templates/events/home.html: HTML template for the home page.
-requirements.txt: Lists project dependencies.
-Telnet Commands
-execute_telnet_commands: Function in views.py responsible for establishing a Telnet connection and executing commands on a network device.
-python
-Copy code
-def execute_telnet_commands(host, username, password, commands):
-    # Implementation details...
-Additional Information
-Network Topology Diagram
-A network topology diagram illustrating the setup can be found in topology_diagram.png.
-License
-This project is licensed under the MIT License.
-
-Contributors
-Your Name (@yourusername)
-Feel free to contribute by opening issues or submitting pull requests!
+   ```bash
+   git clone https://github.com/yourusername/DjangoNetSphere.git
+   cd DjangoNetSphere
