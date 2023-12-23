@@ -93,12 +93,12 @@ DjangoNetSphere is a sophisticated smart home automation system that leverages t
 This project includes a sample network topology created using EVE-NG, a network emulation platform. The topology is designed for testing connectivity and showcasing the integration of Django with network automation.
 
 ## Topology Diagram
-
-![Network Topology](path/to/topology_diagram.png)
+<img width="251" alt="topology_diagram" src="https://github.com/FouadHellal/DjangoNetSphere/assets/113594352/a78f54c9-97dc-4148-ad15-5cd9897c7480">
 
 ## Purpose
 
 The topology has been configured to simulate a small network environment. It includes a MultiLayer Cisco Switch to demonstrate the interaction between the Django web application and network devices. The primary goal is to test connectivity and verify the functionality of network commands triggered by the temperature conditions in the Django application.
+
 
 Feel free to explore and modify the topology for your specific testing needs.
 # License
