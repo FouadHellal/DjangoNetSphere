@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Dashboard</title>
+
+</head>
+<body>
+    <center>
+        <div>
+            <h1>Current things</h1>
+            <p>Latest Temperature: {{ temperature_value }}</p> <br>
+            <p>Latest Humidity: {{ humidity_value }}</p> <br>
+            <p>Latest Pressure: {{ preassure_value }}</p>
+
+                {% if temperature_value > 30 %}
+                    <p style="color: red;">Attention: Temperature is above 30 degrees!</p>
+                {% else %}
+                    <p>Temperature is normal.</p>
+                {% endif %}
+
+            </ul>
+        </div>
+         <div>
+            <!-- Button to trigger topology commands -->
+            <form method="post" action="{% url 'trigger_topology' %}">
+                {% csrf_token %}
+                <input type="submit" value="Trigger Topology Commands">
+            </form>
+        </div>
+    </center>
+</body>
+</html>
