@@ -4,6 +4,18 @@
 
 DjangoNetSphere is a sophisticated smart home automation system that leverages the power of Django, a robust web framework, to seamlessly integrate network automation. This project includes a feature-rich temperature dashboard that monitors real-time environmental conditions and triggers network commands based on temperature thresholds.
 
+## Table of Contents
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+- [File Structure](#file-structure)
+- [Temperature Dashboard Flow](#temperature-dashboard-flow)
+- [Network Topology](#network-topology)
+- [License](#license)
+- [Contributors](#contributors)
+
 ## Features
 
 - **Temperature Dashboard:** View real-time temperature, humidity, and pressure data through a simple HTML web interface.
@@ -78,6 +90,20 @@ DjangoNetSphere is a sophisticated smart home automation system that leverages t
 - **requirements.txt:**
   - Lists project dependencies.
 
+## Temperature Dashboard Flow
+
+### Data Generation:
+
+- Random temperature, humidity, and pressure values are generated periodically.
+
+### Backend:
+
+- The generated data is stored in `data.json` and saved to the database using Django models (`Temperature`, `Humidity`, `Pressure`).
+
+### Frontend:
+
+- The web interface (`home.html`) retrieves real-time data from the database and displays it to the user.
+- Temperature values above a threshold trigger network commands.
 
 # Telnet Commands
 
