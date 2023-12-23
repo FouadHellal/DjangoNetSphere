@@ -29,7 +29,7 @@ DjangoNetSphere is a sophisticated smart home automation system that leverages t
 - Python (3.6 or higher)
 - Django
 - Telnetlib3
-
+-Check requirements.txt
 ### Installation
 
 1. Clone the repository:
@@ -95,6 +95,7 @@ DjangoNetSphere is a sophisticated smart home automation system that leverages t
 ### Data Generation:
 
 - Random temperature, humidity, and pressure values are generated periodically.
+- For professional uses, you can replace the generating functions with real output values.
 
 ### Backend:
 
