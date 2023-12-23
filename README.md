@@ -111,8 +111,41 @@ DjangoNetSphere is a sophisticated smart home automation system that leverages t
   - Function in `views.py` responsible for establishing a Telnet connection and executing commands on a network device.
 
   ```python
+  
   def execute_telnet_commands(host, username, password, commands):
-      # Implementation details...
+      try:
+          # Connect to the device
+          tn = telnetlib.Telnet(host)
+
+          # Read the login prompt
+          tn.read_until(b"Username:")
+          tn.write(username.encode('ascii') + b"\n")
+
+          # Read the password prompt
+          tn.read_until(b"Password:")
+          tn.write(password.encode('ascii') + b"\n")
+
+          # Wait for the prompt to make sure the login is successful
+          tn.read_until(b">")
+
+          # Execute commands
+          for command in commands:
+              tn.write(command.encode('ascii') + b"\n")
+              time.sleep(1)  # Add a delay to allow the command to be processed
+
+          # Close the connection
+          tn.close()
+
+          print("Commands executed successfully.")
+
+      except Exception as e:
+          print(f"An error occurred: {str(e)}")
+
+  # Replace these values with your actual ones
+  host = "192.168.33.161"
+  username = "zac"
+  password = "zac"
+  commands = ["enable", "zac", "conf t", "logging console informational"]
 
 # More Informations
 

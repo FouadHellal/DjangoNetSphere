@@ -146,7 +146,7 @@ def update_temperature_periodically():
                       json_file)
 
             # Enregistrez également la valeur dans la base de données si nécessaire
-            save_temperature_to_database(temperature_value)
+            save_to_database(temperature_value)
 
         time.sleep(5)
 
