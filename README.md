@@ -29,7 +29,7 @@ DjangoNetSphere is a sophisticated smart home automation system that leverages t
 - Python (3.6 or higher)
 - Django
 - Telnetlib3
-
+-Check requirements.txt
 ### Installation
 
 1. Clone the repository:
@@ -95,6 +95,7 @@ DjangoNetSphere is a sophisticated smart home automation system that leverages t
 ### Data Generation:
 
 - Random temperature, humidity, and pressure values are generated periodically.
+- For professional uses, you can replace the generating functions with real output values.
 
 ### Backend:
 
@@ -106,7 +107,12 @@ DjangoNetSphere is a sophisticated smart home automation system that leverages t
 - Temperature values above a threshold trigger network commands.
 
 # Telnet Commands
+**🚨 Important Notice:**
 
+It's crucial to note that the IP address **192.168.33.161**, referred to as 'HOST,' represents the VLAN 1 interface configured earlier. Don't forget to configure your specific IP address to enable Telnet access to your virtual topology.
+
+🔒 Ensure proper configuration for seamless connectivity!
+ 
 - **execute_telnet_commands:**
   - Function in `views.py` responsible for establishing a Telnet connection and executing commands on a network device.
 
