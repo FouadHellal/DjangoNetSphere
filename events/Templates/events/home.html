@@ -12,14 +12,6 @@
             margin: 0;
             padding: 0;
         }
-
-        header {
-            background-color: #3498db;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
         nav {
             background-color: #333;
             overflow: hidden;
@@ -101,9 +93,6 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Temperature Dashboard</h1>
-    </header>
 
     <nav>
         <a href="#home">Home</a>
@@ -116,7 +105,7 @@
             <h2>Current Readings</h2>
             <p>Latest Temperature: {{ temperature_value }}</p>
             <p>Latest Humidity: {{ humidity_value }}</p>
-            <p>Latest Preassure: {{ pressure_value }}</p>
+            <p>Latest Pressure: {{ preassure_value }}</p>
 
             {% if temperature_value > 30 %}
                 <p class="warning">Attention: Temperature is above 30 degrees!</p>
@@ -135,7 +124,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2023 Your Name. All rights reserved.</p>
+        <p>&copy; 2023 Fouad HELLAL. All rights reserved.</p>
     </footer>
 </body>
 </html>

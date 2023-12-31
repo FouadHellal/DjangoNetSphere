@@ -151,6 +151,17 @@ def update_temperature_periodically():
         time.sleep(5)
 
 '''-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-'''
+# # events/views.py
+# from django.http import JsonResponse
+# import json
+# import os
+
+# def get_realtime_data(request):
+#     json_file_path = os.path.join(os.path.dirname(__file__), 'data.json')
+#     with open(json_file_path, 'r') as json_file:
+#         data = json.load(json_file)
+
+#     return JsonResponse(data)
 
 '''--------------------The return functions--------------------'''
 
