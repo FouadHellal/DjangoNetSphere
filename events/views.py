@@ -11,11 +11,11 @@ import telnetlib
 '''---------------------------------'''
 
 def generate_random_temperature():
-    return round(random.uniform(5, 50), 2)
+    return round(random.uniform(10, 40), 2)
 def generate_random_humidity():
     return round(random.uniform(0, 100), 1)
 def generate_random_pressure():
-    return round(random.uniform(0, 12000), 2)
+    return round(random.uniform(990, 1010), 1)
 
 # This lock (update_lock) will be used to synchronize access to the critical section of code, 
 #ensuring that only one thread can execute it at a time.
